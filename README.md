@@ -28,7 +28,7 @@ Install the library directly from the GitHub repository to get the latest stable
 ```bash
 npm install github:AunuHost/baileysv
 ```
-# Or add it to your package.json:
+### Or add it to your package.json:
 ```bash
 "dependencies": {
   "@aunuhost/baileys": "github:AunuHost/baileysv"
@@ -37,9 +37,9 @@ npm install github:AunuHost/baileysv
 
 ---
 
-### Getting Started
+# Getting Started
 
-# 1. Connecting With Qr Code
+### 1. Connecting With Qr Code
 ```bash
 const { default: makeWASocket } = require('@aunuhost/baileys');
 
@@ -49,7 +49,7 @@ const client = makeWASocket({
 });
 ```
 
-# 2. Connecting with Phone Number (Pairing Code)
+### 2. Connecting with Phone Number (Pairing Code)
 ```bash
 const { 
   default: makeWASocket, 
@@ -71,9 +71,9 @@ async function connect() {
 }
 ```
 
-### Advanced Messaging Examples
+# Advanced Messaging Examples
 
-# Sending Order Message
+### Sending Order Message
 ```bash
 const fs = require('fs');
 const imageBuffer = fs.readFileSync('./image.jpg');
@@ -87,7 +87,7 @@ await client.sendMessage(jid, {
 }, { quoted: m });
 ```
 
-# Sending Poll Result
+## Sending Poll Result
 ```bash
 await client.sendMessage(jid, {
   pollResultMessage: {
@@ -104,7 +104,7 @@ await client.sendMessage(jid, {
 });
 ```
 
-# Sending Product Message (CTA)
+## Sending Product Message (CTA)
 ```bash
 await client.relayMessage(jid, {
   productMessage: {
